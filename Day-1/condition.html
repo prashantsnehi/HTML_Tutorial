@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Condition Examples</h2>
+    <script type="text/JavaScript">
+        // Example 1: Simple condition
+        let age = 20;
+        if (age >= 18) {
+            document.write("<br/>You are an adult.");
+        } else {
+            document.write("<br/>You are a minor.");
+        }
+
+        // Example 2: Multiple conditions
+        let score = 85;
+        if (score >= 90) {
+            document.write("<br/>Grade: A");
+        } else if (score >= 80) {
+            document.write("<br/>Grade: B");
+        } else if (score >= 70) {
+            document.write("<br/>Grade: C");
+        } else {
+            document.write("<br/>Grade: D or F");
+        }
+
+        // Example 3: Ternary operator
+        let isMember = true;
+        let discount = isMember ? "<br/>20% off" : "<br/>10% off";
+        document.write(`<br/>You get a ${discount} on your purchase.`);
+
+        // Example 4: Switch statement
+        document.write("<br/>Day of the week: ");
+        let day = 1;
+        switch (day) {
+            case 1:
+                document.write("Monday");
+                break;
+            case 2:
+                document.write("Tuesday");
+                break;
+            case 3:
+                document.write("Wednesday");
+                break;
+            case 4:
+                document.write("Thursday");
+                break;
+            case 5:
+                document.write("Friday");
+                break;
+            case 6:
+                document.write("Saturday");
+                break;
+            case 7:
+                document.write("Sunday");
+                break;
+            default:
+                document.write("Invalid day");
+        }
+        // Example 5: Logical operators
+        let isLoggedIn = true;
+        let hasPermission = false;
+        if (isLoggedIn && hasPermission) {
+            document.write("<br/>Access granted.");
+        } else {
+            document.write("<br/>Access denied.");
+        }
+        // Example 6: Nested conditions
+        let temperature = 30;
+        if (temperature > 25) {
+            document.write("<br/>It's warm outside.");
+            if (temperature > 30) {
+                document.write("<br/> It's hot!");
+            }
+        } else {
+            document.write("<br/>It's cool outside.");
+        }
+        // Example 7: Using conditions in loops
+        for (let i = 1; i <= 5; i++) {
+            if (i % 2 === 0) {
+                document.write(`${i} is even.<br>`);
+            } else {
+                document.write(`${i} is odd.<br>`);
+            }
+        }
+
+        document.write("<table border='1'>");
+        for(var i=1; i <= 10; i++) {
+            document.write("<tr>");
+            for(var j=1; j <= 10; j++) {
+                //document.write("<td>" + i + "x" + j + " = " + (i * j) + "</td>");
+                document.write("<td text-align: right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 
+                    + (i * j) + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

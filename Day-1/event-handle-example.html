@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // Example: Event handling
+        function info() {
+            alert("This is an event handling example.");
+        }
+        function changeColor() {
+            window.document.getElementById("colorChange").style.color = "blue";
+        }
+        function updateColor() {
+            document.getElementById("colorChange").style.color = "black";
+        }
+    </script>
+    </head>
+<body>
+    <H2 id="colorChange">This is event examples</H2>
+    <input type="button" value="Click Me!" onclick="info()" />
+    <input type="button" value="Hover Over Me!" 
+        onmouseover="changeColor()"
+        onmouseleave="updateColor()" />
+    <input type="text" 
+        placeholder="Type something here..." 
+        onfocus="changeColor()" />
+</body>
+</html>
