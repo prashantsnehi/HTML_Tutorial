@@ -26,6 +26,9 @@ let num2 = new Array(10, 20, 30, 40, 50, 60);
 // num.shift(); // Remove the first element
 // document.writeln("After removing elements: " + num + "<br>");
 
+document.writeln("Different sepertor: <br>");
+document.writeln(": " + num.join(" ") + "<br>");
+
 document.writeln("Using forEach: arrow callback function <br>");
 let displayValue = (value, index) => 
     document.writeln("Element at index " + index + ": " + value + "<br>");
