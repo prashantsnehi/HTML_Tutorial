@@ -12,7 +12,7 @@ let createNewElement = () => {
         newLabel.innerHTML = 'Input ' + (i + 1);
     
         var newElement = document.createElement('input');
-        newElement.setAttribute('type', 'text');
+        newElement.setAttribute('type', 'password');
         newElement.setAttribute('placeholder', 'Enter text here');
         newElement.setAttribute('class', 'form-control');
         newElement.setAttribute('id', 'input-' + i);
