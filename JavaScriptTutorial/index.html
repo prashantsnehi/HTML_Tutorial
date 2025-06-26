@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Array</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous">
+        <style>
+            #demo {
+                border: 2px solid red;
+                border-radius: 20px;
+                box-shadow: 0 10px 0 10px grey;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <div id="demo">
+                <button type="button" class="btn btn-primary m-4"
+                    onclick="showInTable()">Click Me!!!</button>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Output in unordered list format</div>
+                            <div class="card-body">
+                                <ul id="output"></ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Output in tble format</div>
+                            <div class="card-body">
+                                <table class="table table-striped m-1">
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th>Index</th>
+                                            <th>Value</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblData">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="script.js"></script>
+</html>
