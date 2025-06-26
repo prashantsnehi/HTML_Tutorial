@@ -1,0 +1,40 @@
+.flex-container {
+    display: flex;
+    /* flex-direction: row;  */
+    /* Change to 'column' for vertical layout */
+    /* justify-content: end;  */
+    /* Centers items vertically */
+    /* align-items: center;  */
+    /* Centers items horizontally  */
+}
+
+.flex-item {
+    background-color: #f0f0f0;
+    width: 200px; /* Sets a fixed width for each item */
+    border: 3px solid #ccc;
+    padding: 30px;
+    margin: 10px;
+    /* flex-grow: 1; Allows items to grow and fill the container */
+    /* box-shadow: 10px 10px 10px 10px rgba(10, 20, 30, 0.7); Adds a shadow effect */
+}
+
+.flex-item-1 {
+    /* flex-basis: 100px;  */
+    /* Sets a base width for this item */
+    min-height: 100px;
+}
+
+.flex-item-2 {
+    /* flex-basis: 100px;  */
+    /* Sets a base width for this item */
+    min-height: 200px;
+    /* flex-grow: 1; */
+    align-self: center; 
+    /* Centers this item vertically */
+}
+
+.flex-item-3 {
+    /* flex-basis: 100px;  */
+    /* Sets a base width for this item */
+    min-height: 300px;
+}
