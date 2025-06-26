@@ -1,0 +1,31 @@
+html {
+    background-color: pink;
+    padding: 10px;
+}
+
+body {
+    background-color: #72F074;
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding: 20px;
+    /* position: relative; */
+    /* height: 500vh; */
+}
+
+header {
+    background-color: #BEA0EB;
+    margin: 10px;
+}
+
+nav {
+    background-color: #BEA0EB;
+    margin: 10px;
+}
+
+footer {
+    background-color: #BEA0EB;
+    margin: 10px;
+}
+
