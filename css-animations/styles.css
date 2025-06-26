@@ -1,0 +1,200 @@
+.container {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.parent {
+    background-color: #E9A5F0;
+    height: 400px;
+    width: 400px;
+}
+
+.child {
+    background-color: #E93C21;
+    height: 50%;
+    width: 50%;
+}
+
+.parent:hover .child {
+    background-color: #93C521;
+    transform: translateX(100%);
+
+    animation: example 5s ease-in 1s infinite forwards normal;
+    /* animation-name: example;
+    animation-duration: 10s;
+    animation-direction: forward;
+    animation-delay: 1s; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes example {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+
+    33% {
+        transform: translateY(100%);
+    }
+
+    66% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.box {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin: 100px 0 0 200px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+
+    animation-name: bowling;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-play-state: running;
+}
+
+@keyframes myframes {
+    from {
+        height: 200px;
+        background-color: orange;
+    }
+
+    to {
+        height: 500px;
+        color: green;
+    }
+}
+
+@keyframes myframe-2 {
+    0% {
+        margin: 10px;
+        height: 200px;
+    }
+
+    40% {
+        margin: 40px;
+        background-color: green;
+    }
+
+    80% {
+        margin: 80px;
+        background-color: blue;
+    }
+
+    100% {
+        margin: 100px;
+        height: 500px;
+        background-color: yellow;
+    }
+}
+
+@keyframes bowling {
+    0% {
+        background-color: yellow;
+        margin: 100px 0 0 250px;
+    }
+    10% {
+        background-color: green;
+        margin: 100px 0 0 300px;
+    }
+
+    20% {
+        background-color: red;
+        margin: 100px 0 0 350px;
+    }
+
+    30% {
+        background-color: blue;
+        margin: 100px 0 0 400px;
+    }
+    40% {
+        background-color: violet;
+        margin: 100px 0 0 450px;
+    }
+
+    50% {
+        background-color: orange;
+        margin: 100px 0 0 500px;
+    }
+    60% {
+        background-color: purple;
+        margin: 100px 0 0 450px;
+    }
+    70% {
+        background-color: cyan;
+        margin: 100px 0 0 400px;
+    }
+
+    80% {
+        background-color: lightblue;
+        margin: 100px 0 0 350px;
+    }
+
+    90% {
+        background-color: pink;
+        margin: 100px 0 0 300px;
+    }
+    
+    100% {
+        background-color: yellow;
+        margin: 100px 0 0 250px;
+    }
+}
+
+    @keyframes football {
+    0% {
+        margin: 20px ;
+    }
+    10% {
+        margin: 30px;
+    }
+
+    20% {
+        margin: 40px;
+    }
+
+    30% {
+        margin: 50px;
+    }
+    40% {
+        margin: 60px;
+    }
+
+    50% {
+        margin: 70px;
+    }
+    60% {
+        margin: 60px;
+    }
+    70% {
+        margin: 50px;
+    }
+
+    80% {
+        margin: 40px;
+    }
+
+    90% {
+        margin: 30px;
+    }
+    
+    100% {
+        margin: 20px;
+    }
+
+
+}
