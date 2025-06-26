@@ -31,17 +31,18 @@ let showResult = () => {
 }
 
 let showInTable = () => {
-    // let resultTarget = document.getElementById('output');
-    // var tblCol = document.getElementById('tblData');
-    // resultTarget.innerHTML = '';
-    // tblCol.innerHTML = '';
-    showResult();
-    
     let generator = testFunction();
 
     var obj = {value: 0, done: false};
     let x = 0;
     let objArray = [];
+    let tblHead = `<tr>
+                        <th>Index</th>
+                        <th>Value</th>
+                        <th>Status</th>
+                    </tr>`
+    document.getElementById('thead').innerHTML = tblHead;
+
     while(obj.done == false) {
         obj = generator.next();
         var tblrow = document.createElement('tr');
@@ -50,13 +51,13 @@ let showInTable = () => {
                             <td>${obj.value}</td>
                             <td style="color: ${obj.done ? 'green': 'red'}">${obj.done.toString()}</td>`
 
-        var tblCol = document.getElementById('tblData');
-        if(obj.done) {
-            tblrow.innerHTML = `<td>${x}</td>
-                            <td>${obj.value}</td>
-                            <td style="color: ${obj.done ? 'green': 'red'}">${obj.done.toString()}</td>`
-        }
-        tblCol.appendChild(tblrow);
+        document.getElementById('tblData').appendChild(tblrow);
         x++;
     }
+}
+
+let clearAll = ()  => {
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('thead').innerHTML = '';
+    document.getElementById('tblData').innerHTML = '';
 }
