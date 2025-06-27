@@ -16,61 +16,126 @@
                 box-shadow: 0 10px 0 10px grey;
                 padding: 20px;
             }
+
+            .demo {
+                border: 2px solid red;
+                border-radius: 20px;
+                box-shadow: 0 10px 0 10px grey;
+                padding: 20px;
+            }
         </style>
     </head>
     <body>
-        <div class="container mt-4">
-            <div id="demo">
-                <div
-                    class="row d-flex justify-content-around align-content-center mb-4">
-                    <div class="col-md-4 d-grid gap-2">
-                        <button class="btn btn-success"
-                            type="button"
-                            onclick="showResult()">Click Me to view result in list !!!</button>
-                    </div>
-                    <div class="col-md-4 d-grid gap-2">
-                        <button class="btn btn-info"
-                            type="button"
-                            onclick="showInTable()">Click Me to view result in table !!!</button>
-                    </div>
-                    <div class="col-md-4 d-grid gap-2">
-                        <button class="btn btn-danger"
-                            type="button"
-                            onclick="clearAll()">Click Me to clear all!!!</button>
-                    </div>
+        <div class="container mt-4 demo">
+            <div
+                class="row d-flex justify-content-center align-content-center">
+                <div class="col-md-3">
+                    <form>
+                        <div class="col-md-12 mb-3">
+                            <label for="exampleInputEmail1"
+                                class="form-label">Email
+                                address</label>
+                            <input type="text" class="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                onkeyup="emailValidation()">
+                            <!-- <div id="emailHelp" class="form-text">We'll never
+                                share
+                                your email with anyone else.</div> -->
+                            <span id="emailError"></span>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="exampleInputPassword1"
+                                class="form-label">Password</label>
+                            <input type="password" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <!-- <div class="col-md-12 mb-3 form-check">
+                            <input type="checkbox" class="form-check-input"
+                                id="exampleCheck1">
+                            <label class="form-check-label"
+                                for="exampleCheck1">Check me out</label>
+                        </div> -->
+                        <div class="col-md-12 mb-3 d-grid gap-2">
+                            <button type="submit"
+                                class="btn btn-primary"
+                                onclick="emailValidation()">Submit</button>
+                        </div>
+                    </form>
                 </div>
+                <div class="col-md-9">
+                    <div id="demo">
+                        <div
+                            class="row d-flex justify-content-around align-content-center mb-4">
+                            <div class="col-md-4 d-grid gap-2">
+                                <button class="btn btn-success"
+                                    type="button"
+                                    onclick="showResult()">Click Me to view
+                                    result in
+                                    list !!!</button>
+                            </div>
+                            <div class="col-md-4 d-grid gap-2">
+                                <button class="btn btn-info"
+                                    type="button"
+                                    onclick="showInTable()">Click Me to view
+                                    result in
+                                    table !!!</button>
+                            </div>
+                            <div class="col-md-4 d-grid gap-2">
+                                <button class="btn btn-danger"
+                                    type="button"
+                                    onclick="clearAll()">Click Me to clear
+                                    all!!!</button>
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-header">Output in unordered list
-                                format</div>
-                            <div class="card-body">
-                                <ul id="output"></ul>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">Output in unordered
+                                        list
+                                        format</div>
+                                    <div class="card-body">
+                                        <ul id="output"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header">Output in tble
+                                        format</div>
+                                    <div class="card-body">
+                                        <table class="table table-striped m-1">
+                                            <thead class="text-center"
+                                                id="thead">
+                                                <!-- <tr>
+                                                    <th>Index</th>
+                                                    <th>Value</th>
+                                                    <th>Status</th>
+                                                </tr> -->
+                                            </thead>
+                                            <tbody id="tblData">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-header">Output in tble format</div>
-                            <div class="card-body">
-                                <table class="table table-striped m-1">
-                                    <thead class="text-center" id="thead">
-                                        <!-- <tr>
-                                            <th>Index</th>
-                                            <th>Value</th>
-                                            <th>Status</th>
-                                        </tr> -->
-                                    </thead>
-                                    <tbody id="tblData">
 
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
+            </div>
+            <div
+                class="row d-flex justify-content-center align-content-center mb-3">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1"
+                        class="form-label">Example textarea</label>
+                    <textarea class="form-control"
+                        id="exampleFormControlTextarea1" rows="3"
+                        onkeyup="checkTextLimit()"></textarea>
+                </div>
+                <span id="textAreaTextCount" style="color: red;"></span>
             </div>
         </div>
     </body>
@@ -79,4 +144,5 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script type="text/JavaScript" src="script.js"></script>
+    <script type="text/JavaScript" src="emailvalidation.js"></script>
 </html>
