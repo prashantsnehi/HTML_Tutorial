@@ -1,0 +1,51 @@
+/* body {
+    background-image: url(tech.jpg);
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #8DB5ED;
+    background-blend-mode: darken;
+} */
+
+/* .tr {
+    clip-path: polygon(42% 23%, 75% 0%, 100% 50%, 43% 77%, 0% 50%);
+    height: 60%;
+    width: 60%;
+    background-color: #8DB5ED;
+    position: absolute;
+    z-index: -1;
+} */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes blink {
+    0% {
+        background-color: indigo;
+    }
+    30% {
+        background-color: red;
+    }
+
+    70% {
+        background-color: green;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+div {
+    margin: 100px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    animation: blink 10s infinite;
+    -webkit-animation: blink 10s infinite;
+    border-radius: 50%;
+}
